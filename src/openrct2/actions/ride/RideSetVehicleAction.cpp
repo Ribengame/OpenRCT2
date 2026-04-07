@@ -134,8 +134,7 @@ namespace OpenRCT2::GameActions
             return Result(Status::invalidParameters, errTitle, STR_ERR_RIDE_NOT_FOUND);
         }
 
-        const bool shouldInvalidateForcedCircuitReset =
-            ride->numCircuits != 1
+        const bool shouldInvalidateForcedCircuitReset = ride->numCircuits != 1
             && (_type == RideSetVehicleType::NumTrains || _type == RideSetVehicleType::TrainsReversed);
 
         switch (_type)
